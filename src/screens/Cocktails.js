@@ -1,65 +1,45 @@
-import axios from 'axios'
 import { useState }from 'react'
 import CocktailCard from '../components/CocktailCard'
+import fetchData from '../services/constants'
 
 function Cocktails(){
 
- const [nonAlcoholics, setNonAlcoholics] = useState([])
- const [alcoholics, setAlcoholics] = useState([])
-    
-    const nonAlcoholicDrinks = async () => {
-        try {
-            let response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`)
-            //console.log(response.data.drinks)
-             const { drinks } = response.data
-            setNonAlcoholics(drinks)
-           console.log(nonAlcoholics)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-
-    const alcoholicDrinks = async () => {
-        try {
-            let response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
-            //console.log(response.data.drinks)
-             const { drinks } = response.data
-            setAlcoholics(drinks)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-    
-    const handleNonAlcoholicBtn = (e)=>{
+ const [cocktails, setCocktails] = useState([])
+     
+    const handleNonAlcoholicBtn = async (e)=>{
        e.preventDefault()
-       nonAlcoholicDrinks()
-       renderNonAlcoholic()
+       try {
+           let res = await fetchData(e.target.value)
+           console.log("NonAlc", res)
+           const nonAlc = res.data.drinks
+           if(nonAlc){
+               setCocktails(nonAlc)
+           }
+       } catch (error) {
+           console.log(error)
+       }
     }
    
-    const handleAlcoholicBtn = (e)=>{
+    const handleAlcoholicBtn = async (e)=>{
         e.preventDefault()
-        alcoholicDrinks()
-        renderAlcoholic()
-     }
- 
-    const renderNonAlcoholic = () => {
-        return nonAlcoholics.map((nonAlcoholic,index) => {
-            return (
-                <CocktailCard 
-                  name={nonAlcoholic.strDrink}
-                  image={nonAlcoholic.strDrinkThumb}
-                />
-            )
-        })
+        try {
+            let res = await fetchData(e.target.value)
+            console.log("Alc", res)
+            const alc = res.data.drinks
+            if(alc){
+                setCocktails(alc)
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
-
-    const renderAlcoholic = () => {
-        return alcoholics.map((alcoholic,index) => {
+ 
+    const renderCocktails = () => {
+        return cocktails.map((cocktail,index) => {
             return (
                 <CocktailCard 
-                  name={alcoholic.strDrink}
-                  image={alcoholic.strDrinkThumb}
+                  name={cocktail.strDrink}
+                  image={cocktail.strDrinkThumb}
                 />
             )
         })
@@ -68,14 +48,11 @@ function Cocktails(){
     return(
          <div>
              <div>
-             <button onClick={(e) => {handleAlcoholicBtn(e)}}>Alcoholic Cocktails</button>
-             <button onClick={(e) => {handleNonAlcoholicBtn(e)}}>Non-Alcoholic Cocktails</button>
+             <button onClick={(e) => {handleAlcoholicBtn(e)}} value='Alcoholic'>Alcoholic</button>
+             <button onClick={(e) => {handleNonAlcoholicBtn(e)}} value='Non_Alcoholic'>Non_Alcoholic</button>
             </div>
-            <div className='nonalcoholic'>{renderNonAlcoholic()}</div>
-            <div className='alcoholic'>{renderAlcoholic()}</div>
-         
+            <div className='nonalcoholic'>{renderCocktails()}</div>
          </div>
-       
     )
 }
 
