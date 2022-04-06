@@ -1,9 +1,10 @@
+import Random from "./Random"
 
 function Home(){
     return(
         <div>
-
-        </div>
+           <Random />         
+         </div>
     )
 }
 
