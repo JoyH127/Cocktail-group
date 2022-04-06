@@ -51,7 +51,7 @@ function Cocktails() {
   };
 
   return (
-    <div>
+    <div className="Cocktails">
       <div>
         <button
           onClick={(e) => {

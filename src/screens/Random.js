@@ -23,7 +23,8 @@ function Random() {
   }, []);
 
   return (
-    <div>
+    <div className="Random">
+      <h2>Today's cocktails</h2>
       <h3>{random.strDrink}</h3>
       <img src={random.strDrinkThumb} alt="random" />
     </div>
