@@ -56,4 +56,4 @@ function Cocktails(){
     )
 }
 
-export default Cocktails
+export default Cocktails;
