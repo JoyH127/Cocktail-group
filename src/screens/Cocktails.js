@@ -39,6 +39,7 @@ function Cocktails() {
   console.log("non", nonAlcoholics);
   console.log("he", alcoholics);
 
+  //switch render value depending on button.
   const handleNonAlcoholicBtn = (e) => {
     e.preventDefault();
     setRender(nonAlcoholics);
@@ -47,20 +48,7 @@ function Cocktails() {
   const handleAlcoholicBtn = (e) => {
     e.preventDefault();
     setRender(alcoholics);
-    // alcoholicDrinks();
-    // renderAlcoholic();
   };
-
-  // const renderAlcoholic = () => {
-  //   return alcoholics.map((alcoholic, index) => {
-  //     return (
-  //       <CocktailCard
-  //         name={alcoholic.strDrink}
-  //         image={alcoholic.strDrinkThumb}
-  //       />
-  //     );
-  //   });
-  // };
 
   return (
     <div>
