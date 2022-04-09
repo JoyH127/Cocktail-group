@@ -1,11 +1,13 @@
-import Random from "./Random"
+import FoodRandom from "./FoodRandom";
+import Random from "./Random";
 
-function Home(){
-    return(
-        <div>
-           <Random />         
-         </div>
-    )
+function Home() {
+  return (
+    <div>
+      <Random />
+      <FoodRandom />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
