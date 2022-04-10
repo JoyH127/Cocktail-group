@@ -23,9 +23,10 @@ function FoodRandom() {
   return (
     <div className="Random">
       <h2>Today's Food</h2>
-      <h3>{FRandom.strMeal}</h3>
+      <h3>Name: {FRandom.strMeal}</h3>
       <h4>{FRandom.strCategory}</h4>
-      <img src={FRandom.strDrinkThumb} alt="random" />
+      <img src={FRandom.strMealThumb} />
+      <a href={FRandom.strYoutube}>How to make</a>
     </div>
   );
 }
