@@ -22,11 +22,20 @@ function FoodRandom() {
 
   return (
     <div className="Random">
-      <h2>Today's Food</h2>
-      <h3>Name: {FRandom.strMeal}</h3>
-      <h4>{FRandom.strCategory}</h4>
+      <div className="cover">
+        <span>
+          <h1>Food</h1>
+        </span>
+        <div className="foodText">
+          <p>Featured recommend</p>
+          <h1>{FRandom.strMeal}</h1>
+          <p>{FRandom.strArea}</p>
+          <a href={FRandom.strSource}>
+            <button>Resource</button>
+          </a>
+        </div>
+      </div>
       <img src={FRandom.strMealThumb} />
-      <a href={FRandom.strYoutube}>How to make</a>
     </div>
   );
 }
