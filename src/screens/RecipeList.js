@@ -1,9 +1,9 @@
 
 function RecipeList(props){
-    return(
+
+   return(
         <div>
-            <li>{props.strCategory}</li>
-            <li>{props.strArea}</li>
+         
         </div>
     )
 }

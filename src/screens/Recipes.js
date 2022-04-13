@@ -1,74 +1,93 @@
 import { useState } from 'react';
-import { fetchCategory } from '../services/constants';
-import { fetchCuisine } from '../services/constants';
+import {fetchCategoryList, fetchRecipes, fetchCuisineList} from '../services/constants'
 import RecipeCard from '../components/RecipeCard';
-import RecipeList from './RecipeList';
 
 function Recipes(){
+    const [recipes, setRecipes] = useState([])
+    const [categLists, setCategLists] = useState([])
+    const [cuisLists, setCuisLists] = useState([])
 
-    const [categories, setCategories] = useState([])
-    const [cuisines, setCuisines] = useState([])
- 
-    const handleCategoryBtn = async (e) => {
+    const handleRecipesList = async (e) => {
         e.preventDefault()
         try {
-            let res = await fetchCategory()
-            //console.log("Categories", res)
-            const categ = res.data.meals
-            //console.log(categ)
-            if(categ){
-                setCategories(categ)
-                //console.log(categories)
-                renderCategoryList()
-            }
-            console.log(categories)
-       
+            let res = await fetchRecipes(e.target.value)
+             console.log(res)
+             setRecipes(res.data.meals)
         } catch (error) {
             console.log(error)
         }
     }
 
-    const handleCuisineBtn = async (e) => {
-        e.preventDefault()
-        try {
-            let response = await fetchCuisine()
-            //console.log("Cuisines", response)
-            const cuis = response.data.meals
-            console.log(cuis)
-            if(cuis){
-                setCuisines(cuis)
-                renderCuisineList()
-            }
-            console.log(cuisines)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-    const renderCategoryList = () => {
-        return categories.map((category,index) => {
-            //console.log(category.strCategory)
-            return(
-                <li>{category.strCategory}</li>
-            //    <RecipeList 
-            //    category={category.strCategory}
-            //    />
-            )
-        })
-    }
-
-    const renderCuisineList = () => {
-        return cuisines.map((cuisine,index) => {
-          return (
-            <div>
-                <li>{cuisine.strArea}</li>
-                {/* <RecipeList 
-                cuisine={cuisine.strArea}
-                /> */}
-            </div>
+    const renderRecipes = () => {
+        return(
+            recipes.map((recipe,index) => {
+                return(
+                <div>
+                    <button onClick={(e) => handleCategoryListBtn(e)} value={recipe.strCategory}>{recipe.strCategory}</button>
+                    <button onClick={(e) => handleCuisineListBtn(e)} value={recipe.strArea}>{recipe.strArea}</button>
+                </div>
+                )
+            })
         )
-        })
     }
+
+    const handleCategoryListBtn = async (e) => {
+        try {
+            // console.log(e.target.value)
+            let response = await fetchCategoryList(e.target.value)
+            //console.log(response)
+            setCategLists(response.data.meals)
+        } catch (error) {
+            console.log(error)
+        }
+        console.log(categLists)
+    }
+
+    const renderCategoryList = async () => {
+        try {
+            categLists.map((categList,index) => {
+                return(
+                    <div>
+                      <RecipeCard 
+                        name={categList.strMeal}
+                        image={categList.strMealThumb}
+                      />
+                    </div>
+                )
+            })
+        } catch (error) {
+            console.log(error)
+        }
+     }
+
+    const handleCuisineListBtn = async (e) => {
+       try {
+          let response = await fetchCuisineList(e.target.value)
+          console.log(response)
+          setCuisLists(response.data.meals)
+       } catch (error) {
+           console.log(error)
+       }
+       console.log(cuisLists)
+    }
+   
+    const renderCuisineList = async () => {
+        try {
+            cuisLists.map((cuisList,index) => {
+                return(
+                    <div>
+                      <RecipeCard 
+                        name={cuisList.strMeal}
+                        image={cuisList.strMealThumb}
+                      />
+                    </div>
+                )
+            })
+        } catch (error) {
+            console.log(error)
+        }
+     }
+ 
 
     return(
         <div>
@@ -76,14 +95,13 @@ function Recipes(){
                 <h1>Welcome to Recipes Page!</h1>
             </div>
         <div>
-            <button onClick={(e) => handleCategoryBtn(e)}>Recipes by Category</button>
-            <button onClick={(e) => handleCuisineBtn(e)}>Recipes by Cuisine</button>
+            <button onClick={(e) => handleRecipesList(e)} value="c=list">Recipes by Category</button>
+            <button onClick={(e) => handleRecipesList(e)} value="a=list">Recipes by Cuisine</button>
         </div>
+        <div>{renderRecipes()} </div>
         <div>
-          {renderCategoryList()} ? <div>{renderCategoryList()}</div>: <div>{renderCuisineList()}</div>
-        </div>
-        <div>
-            <RecipeCard />
+           <div>{renderCategoryList()}</div>
+           <div> {renderCuisineList()}</div>
         </div>
         </div>
     )
