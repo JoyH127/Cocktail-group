@@ -5,7 +5,9 @@ const team = [
     last: "Hwang"
      },
     location: "New Jersey",
-    email: ""
+    email: "",
+    GitHub: "",
+    LinkedIn: ""
     }
    
 ] 
