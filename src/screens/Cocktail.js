@@ -39,25 +39,27 @@ function Cocktail(props) {
   return (
     <div>
       {typeof cocktail !== "undefined" ? (
-        <div className="cocktail-info-container">
-          <div className="cocktail-info-image">
+  
+          <div className="main-cocktail-info-container" >
+        <div className="info-image-container">
+          <div className="image">
             <img
-              className="cocktail-info-thumb"
+              className="info-thumb"
               src={cocktail.strDrinkThumb}
               alt="cocktail"
-              height={200}
-              width={200}
+              height={300}
+              width={300}
             />
           </div>
-          <div className="cocktail-info-details">
+          <div className="info-details">
             {info.map((item) => (
               <li className="cocktail-info-para">{item}</li>
             ))}
           </div>
         </div>
-      ) : (
-        ""
-      )}
+        </div>
+      ) : ("")
+      }
     </div>
   );
 }
