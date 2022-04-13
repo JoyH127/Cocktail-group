@@ -1,13 +1,14 @@
 const team = [
-    { 
+  {
     name: {
-    first: "Hee",
-    last: "Hwang"
-     },
+      first: "Hee",
+      last: "Hwang",
+    },
     location: "New Jersey",
-    email: ""
-    }
-   
-] 
+    email: "",
+    GitHub: "",
+    LinkedIn: "",
+  },
+];
 
-export default team
+export default team;
