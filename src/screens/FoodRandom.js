@@ -10,7 +10,7 @@ function FoodRandom() {
         `https://www.themealdb.com/api/json/v1/1/random.php`
       );
       const { meals } = response.data;
-      console.log(meals);
+      //console.log(meals);
       setFRandom(meals[0]);
     } catch (error) {
       console.log(error);

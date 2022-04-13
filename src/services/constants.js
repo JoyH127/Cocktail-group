@@ -10,12 +10,28 @@ const fetchData = async(category) => {
     }
 }
 
-// const fetchFood = async() => {
-//     try {
-//         const res = await axios.get(``)
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+const fetchCategory = async() => {
+    try {
+        const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?c=list`)
+        //console.log(res)
+        return res
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-export default fetchData
+const fetchCuisine = async() => {
+    try {
+        const resp = await axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
+        //console.log(resp)
+        return resp
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export {
+    fetchData,
+    fetchCategory,
+    fetchCuisine
+}

@@ -6,6 +6,8 @@ import About from "./screens/About";
 import Cocktail from "./screens/Cocktail";
 import logo from "./logo/foodlogo.png";
 import Footer from "./screens/Footer";
+import Recipes from "./screens/Recipes";
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,7 @@ function App() {
 
         <nav>
           <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/recipes"}>Recipes</NavLink>
           <NavLink to={"/cocktails"}>Cocktails</NavLink>
           <NavLink to={"/about"}>About</NavLink>
         </nav>
@@ -21,6 +24,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<Recipes />} />
         <Route path="/cocktails" element={<Cocktails />} />
         <Route path="/cocktails/:name" element={<Cocktail />} />
         <Route path="/about" element={<About />} />
