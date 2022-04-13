@@ -10,4 +10,12 @@ const fetchData = async(category) => {
     }
 }
 
+// const fetchFood = async() => {
+//     try {
+//         const res = await axios.get(``)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
 export default fetchData

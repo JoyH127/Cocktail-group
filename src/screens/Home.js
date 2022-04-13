@@ -1,9 +1,11 @@
 import Random from "./Random"
+import FoodRandom from './FoodRandom'
 
 function Home(){
     return(
         <div>
-           <Random />         
+           <Random /> 
+           <FoodRandom />        
          </div>
     )
 }
