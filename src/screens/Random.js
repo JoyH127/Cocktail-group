@@ -24,19 +24,8 @@ function Random() {
 
   return (
     <div className="Random">
-      <div className="cover">
-        <span>
-          <h1>Cocktail</h1>
-        </span>
-        <div className="cockText">
-          <p>Featured recommend</p>
-          <h1>{random.strDrink}</h1>
-          <p>{random.strAlcoholic}</p>
-          <a href={random.strSource}>
-            <button>Resource</button>
-          </a>
-        </div>
-      </div>
+      <h2>Today's cocktails</h2>
+      <h3>{random.strDrink}</h3>
       <img src={random.strDrinkThumb} alt="random" />
     </div>
   );
