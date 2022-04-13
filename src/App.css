@@ -1,26 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+body {
+  background-color: rgb(214, 206, 194);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .App {
   text-align: center;
 }
+.logo {
+  width: 40px;
+  position: absolute;
+  top: 13px;
+  left: 30px;
+}
 
 .navDiv a {
-  padding: 30px;
-  color: black;
+  padding: 20px 30px 20px 30px;
+  color: white;
   text-decoration: none;
+  font-family: "Cormorant Garamond";
+  font-size: 22px;
 }
-
+.navDiv a:hover {
+  color: rgba(240, 248, 255, 0.747);
+  font-size: 23px;
+  transition: 0.8s;
+}
 .navDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.386);
+  margin-right: 10px;
   padding: 20px 0 20px 0;
-  border: 1px solid black;
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.642) 0%,
+    rgba(0, 0, 0, 0.051) 49%
+  );
+  z-index: 6;
+}
+/* ----------- HomePage -------------*/
+
+.backCotain {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.background {
+  display: block;
+  width: 100%;
+}
+.background_cover {
+  width: 100%;
+  height: 1000px;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.642) 0%,
+    rgba(74, 74, 74, 0.14887962020745793) 49%
+  );
+  z-index: 3;
+  overflow: hidden;
+  display: block;
+}
+h1 {
+  font-family: "Cormorant Garamond";
+}
+.text {
+  position: absolute;
+  color: white;
+  z-index: 4;
+  bottom: 220px;
+  left: 100px;
+  text-align: left;
+  width: 500px;
+  line-height: 2;
+}
+.text button {
+  color: rgba(255, 255, 255, 0.934);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.602);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.8s;
+}
+.text button:hover {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.967);
+  border-radius: 3px;
+  background-color: rgba(254, 254, 254, 0.156);
+  transition: 0.8s;
 }
 
-.Random img {
-  width: 500px;
+.text a:hover {
+  color: rgba(240, 248, 255, 0.747);
+  text-decoration: underline;
+  transition: 0.8s;
+}
+
+/* Home ----- Recommend Section in */
+#recommendSection {
+  margin: 50px 0 80px 0;
+}
+.recommend {
+  display: flex;
+  justify-content: center;
+}
+.recommend img {
+  overflow: hidden;
+}
+.recommend img:hover {
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 .Random {
-  border: 1px solid #000;
+  position: relative;
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
+.cover {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  background-color: rgba(22, 16, 1, 0.899);
+}
+.cover span {
+  display: block;
+  margin-top: 180px;
+}
+.cover .foodText {
+  display: none;
+}
+
+.cover .cockText {
+  display: none;
+}
+
+.cover:hover {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  text-align: left;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.642) 0%,
+    rgba(74, 74, 74, 0.262) 49%
+  );
+  transition: 0.5s;
+}
+.cover:hover .cockText {
+  padding: 60px 50px 0px 40px;
+  display: block;
+  line-height: 0.8;
+  transition: 0.8s;
+}
+.cover:hover .foodText {
+  padding: 60px 50px 0px 40px;
+  display: block;
+  line-height: 0.8;
+  transition: 0.8s;
+}
+
+.cover:hover span {
+  display: none;
+  transition: 0.8s;
+}
+
+.cover button {
+  color: rgba(255, 255, 255, 0.934);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.602);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.8s;
+  margin-top: 25px;
+}
+.cover button:hover {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.967);
+  border-radius: 3px;
+  background-color: rgba(254, 254, 254, 0.156);
+  transition: 0.8s;
+}
+
+/* Cocktails Page */
 button {
   margin: 20px 0 20px 0;
   padding: 5px;
@@ -32,3 +224,39 @@ button {
 .card img {
   width: 200px;
 }
+.Cocktails {
+  padding-top: 100px;
+}
+
+.cockCollection {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid #000;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  background: black;
+  color: white;
+  width: 100%;
+}
+.address img {
+  width: 50px;
+}
+
+.footer .copyright {
+  font-family: "Cormorant Garamond";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+/* add sth more  */
