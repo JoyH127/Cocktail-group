@@ -1,12 +1,12 @@
 import logo from "../logo/foodlogo.png";
 function Footer() {
   return (
-    <section class="footer">
-      <div class="address">
+    <section className="footer">
+      <div className="address">
         <img className="logo" src={logo} />
       </div>
 
-      <div class="copyright">
+      <div className="copyright">
         <p>© 2022 GroupWork - All Rights Reserved.</p>
       </div>
     </section>

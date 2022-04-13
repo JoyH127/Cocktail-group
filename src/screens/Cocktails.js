@@ -1,6 +1,6 @@
 import { useState }from 'react'
 import CocktailCard from '../components/CocktailCard'
-import fetchData from '../services/constants'
+import {fetchData} from '../services/constants'
 
 function Cocktails(){
 
@@ -52,6 +52,7 @@ function Cocktails(){
       <button onClick={(e) => {handleNonAlcoholicBtn(e)}} value='Non_Alcoholic'>Non-Alcoholic Cocktails</button>
       </div>
       <div className='drinks'>{renderCocktails()}</div>
+      <div></div>
     </div>
   );
 }
