@@ -47,7 +47,8 @@ function Cocktails() {
       <div className="Banner">
         <img src={Banner} />
       </div>
-      <div>
+      <div className="space"></div>
+      <div className="buttons">
         <button
           onClick={(e) => {
             handleAlcoholicBtn(e);
@@ -66,7 +67,7 @@ function Cocktails() {
         </button>
       </div>
       <div></div>
-      <div className="drinks">{renderCocktails()}</div>
+      <div className="drinksContainer">{renderCocktails()}</div>
     </div>
   );
 }
