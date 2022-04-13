@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
+
 function Cocktail(props) {
   const [cocktail, setCocktail] = useState([]);
   const [info, setInfo] = useState([]);
@@ -13,6 +15,7 @@ function Cocktail(props) {
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
     );
     const { drinks } = response.data;
+    console.log(drinks)
     // console.log('drinks in fetch', drinks[0])
     setCocktail(drinks[0]);
     //get values of object
@@ -42,8 +45,8 @@ function Cocktail(props) {
               className="cocktail-info-thumb"
               src={cocktail.strDrinkThumb}
               alt="cocktail"
-              height={300}
-              width={300}
+              height={200}
+              width={200}
             />
           </div>
           <div className="cocktail-info-details">
