@@ -268,7 +268,7 @@ h1 {
 
 .buttons {
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .card {
@@ -358,7 +358,7 @@ h1 {
   margin: 0 auto;
   width: 1500px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   transition: 0.5s;
 }
 .left,
@@ -369,11 +369,11 @@ h1 {
 }
 .left {
   left: 150px;
-  top: 200px;
+  top: 170px;
 }
 .right {
   right: 140px;
-  top: 200px;
+  top: 170px;
 }
 .card img {
   position: relative;
@@ -403,7 +403,6 @@ h1 {
   width: 500px;
   border: 1px solid #000;
 }
-
 /* Footer */
 .footer {
   width: 100%;
