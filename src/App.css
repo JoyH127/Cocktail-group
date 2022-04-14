@@ -429,12 +429,20 @@ h1 {
 
 /* add sth more  */
 
-.main-cocktail-info-container{
+/* COCKTAILS DETAILS PAGE */
+.how-to-make-container{
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  /* border: 2px solid; */
-  padding-top: 120px;  
+  width: 400px;
+  border: 1px solid;
+  border-color: rgb(178, 147, 110);
+  border-radius: 20px;
+  background-color: rgb(246, 242, 238);
+}
+
+.cocktail-ingredients{
+  padding-right: 30px;
 }
 
 .info-image-container{
@@ -448,14 +456,56 @@ h1 {
 }
 
 .info-details{
-  font-family: "Cormorant Garamond";
-  text-align: left;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  
+  /* border: 1px solid; */
   padding: 15px;
+  padding-left: 25px;
   list-style: none;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .info-thumb{
   border-radius: 20px;
+}
+
+.main-cocktail-info-container{
+  font-family: "Cormorant Garamond";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 2px solid; */
+  padding-top: 120px;  
+}
+
+.cocktail-measurements{
+  font-weight: 700;
+}
+
+.cocktail-name{
+  font-size: 40px;
+  line-height: .80;
+  font-weight: 1000;
+}
+.cocktail-ingredients-heading{
+  width: 100%;
+  font-size: 20px;
+  line-height: .5;
+}
+.cocktail-directions{
+  background-color: rgb(250, 248, 244);
+  border-radius: 20px;
+  width: 360px;
+  margin-top: 20px;
+  border: 1px solid;
+  border-color: rgb(178, 147, 110);
+  padding: 0 20px 10px 20px;
+}
+.cocktail-directions-title{
+  font-size: 20px;
+  line-height: .1;
+  font-weight: 700;
 }
