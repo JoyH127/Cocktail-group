@@ -68,32 +68,37 @@ function Cocktail(props) {
           <div className="main-cocktail-info-container" >
         <div className="info-image-container">
           <div className="image">
+          <p className="cocktail-name" >{drinkName}</p>
             <img
               className="info-thumb"
               src={cocktail.strDrinkThumb}
               alt="cocktail"
-              height={300}
-              width={300}
+              height={400}
+              width={400}
             />
+                        <p>served in a {drinkGlass}</p>
+
           </div>
           <div className="info-details">
-            <p className="name" >{drinkName}</p>
-            <p>served in a {drinkGlass}</p>
+            
+            <div className="how-to-make-container">  
 
-            <div className="how-to-make-container">
-              <div className="ingredients">
+            <div className="cocktail-ingredients-heading" ><h3>Ingredients</h3></div>    
+
+              <div className="cocktail-ingredients">
               {   ingredient.map(ing => 
                   <p>{ing}</p> ) }
               </div>
-              <div className="measurements" >
+              
+              <div className="cocktail-measurements" >
                 {measurement.map(measure => 
                   <p>{measure}</p> )}
               </div>
             </div>
-
+            <div className="cocktail-directions" >
+              <p className="cocktail-directions-title" >Directions</p>
             <p>{instruction}</p>
-
-
+            </div>
           </div>
         </div>
         </div>
