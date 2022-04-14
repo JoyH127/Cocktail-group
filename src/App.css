@@ -429,12 +429,17 @@ h1 {
 
 /* add sth more  */
 
-.main-cocktail-info-container{
+/* DETAILS PAGE */
+.how-to-make-container{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* border: 2px solid; */
-  padding-top: 120px;  
+  width: 400px;
+  border: 1px solid;
+}
+
+.ingredients{
+  padding-right: 20px;
 }
 
 .info-image-container{
@@ -448,14 +453,36 @@ h1 {
 }
 
 .info-details{
-  font-family: "Cormorant Garamond";
-  text-align: left;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: left; */
+  /* border: 1px solid; */
   padding: 15px;
+  padding-left: 25px;
   list-style: none;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .info-thumb{
   border-radius: 20px;
 }
+
+.main-cocktail-info-container{
+  font-family: "Cormorant Garamond";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 2px solid; */
+  padding-top: 120px;  
+}
+
+.measurements{
+  font-weight: 700;
+}
+
+.name{
+  font-size: 30px;
+  font-weight: 1000;
+}
+
