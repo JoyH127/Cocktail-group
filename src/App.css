@@ -428,3 +428,34 @@ h1 {
 }
 
 /* add sth more  */
+
+.main-cocktail-info-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 2px solid; */
+  padding-top: 120px;  
+}
+
+.info-image-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 4px solid; */
+  padding: 20px;
+  width: 50%;
+}
+
+.info-details{
+  font-family: "Cormorant Garamond";
+  text-align: left;
+  border: 1px solid;
+  padding: 15px;
+  list-style: none;
+  border-radius: 20px;
+}
+
+.info-thumb{
+  border-radius: 20px;
+}

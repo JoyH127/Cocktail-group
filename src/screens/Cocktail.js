@@ -2,11 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-
-
 function Cocktail(props) {
-  // const [cocktail, setCocktail] = useState([]);
-  // const [info, setInfo] = useState([]);
+  const [cocktail, setCocktail] = useState([]);
+  const [info, setInfo] = useState([]);
 
   const[measurement, setMeasure] = useState([]);
   const[ingredient, setIngredients] = useState([]);
