@@ -12,7 +12,7 @@ function Cocktails() {
     e.preventDefault();
     try {
       let res = await fetchData(e.target.value);
-      console.log("NonAlc", res);
+      //console.log("NonAlc", res);
       const nonAlc = res.data.drinks;
       if (nonAlc) {
         setCocktails(nonAlc);
@@ -26,7 +26,7 @@ function Cocktails() {
     e.preventDefault();
     try {
       let res = await fetchData(e.target.value);
-      console.log("Alc", res);
+      //console.log("Alc", res);
       const alc = res.data.drinks;
       if (alc) {
         setCocktails(alc);

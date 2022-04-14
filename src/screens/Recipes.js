@@ -2,6 +2,14 @@ import '../styles/Recipes.css'
 import { useState } from 'react';
 import {fetchCategoryList, fetchRecipes, fetchCuisineList} from '../services/constants'
 import RecipeCard from '../components/RecipeCard';
+import left from "../img/next.png";
+import right from "../img/right.png";
+import food from '../img/food.jpeg'
+import food2 from '../img/food2.jpeg'
+import food1 from '../img/food1.jpeg'
+import food3 from '../img/food3.jpeg'
+import food4 from '../img/food4.jpeg'
+import foodbanner from '../img/foodbanner.jpeg'
 
 function Recipes(){
     const [recipes, setRecipes] = useState([])
@@ -77,8 +85,20 @@ function Recipes(){
             })
     }
  
+    const slideRight = () => {
+        let slide = document.querySelector(".renderDiv");
+        slide.scrollLeft = slide.scrollLeft + 700;
+      };
+      const slideLeft = () => {
+        let slide = document.querySelector(".renderDiv");
+        slide.scrollLeft = slide.scrollLeft - 700;
+      };
+
     return(
         <div className="recipesMain">
+        <div className="foodbanner">
+            <img src={food4} />
+        </div>
         <div className="space"></div>
         <div className="choiceList">
             <button onClick={(e) => handleRecipesList(e)} value="c=list">Recipes by Category</button>
@@ -86,11 +106,18 @@ function Recipes(){
         </div>
         <div className="choiceDiv">{renderRecipes()} </div>
         <div><br></br></div>
-        <div className="renderDiv">
-           <div>{renderCategoryList()}</div>
-        </div>
+        {categLists.length === 0 ? (
+            <></>
+          ) : (
+            <div className="foodslider">
+                <img className="left" src={left} onClick={slideLeft} />
+                <div className="renderDiv">{renderCategoryList()}</div>
+                <img className="right" src={right} onClick={slideRight} />
+            </div>
+          )}
         </div>
     )
 }
+
 
 export default Recipes
