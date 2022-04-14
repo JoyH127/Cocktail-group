@@ -9,9 +9,6 @@ function CocktailCard(props) {
         <img src={props.image} alt="drink" />
         <div className="cock-cover">
           <h3>{props.name}</h3>
-          <button onClick={() => navigate(`/cocktails/${props.name}`)}>
-            More Info
-          </button>
         </div>
       </div>
     </div>
