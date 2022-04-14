@@ -4,14 +4,13 @@ function CocktailCard(props) {
   const navigate = useNavigate();
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => navigate(`/cocktails/${props.name}`)}>
       <div>
         <img src={props.image} alt="drink" />
-        <button onClick={() => navigate(`/cocktails/${props.name}`)}>
-          More Info
-        </button>
+        <div className="cock-cover">
+          <h3>{props.name}</h3>
+        </div>
       </div>
-      <h4>{props.name}</h4>
     </div>
   );
 }
