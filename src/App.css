@@ -213,16 +213,63 @@ h1 {
 }
 
 /* Cocktails Page */
-button {
-  margin: 20px 0 20px 0;
-  padding: 5px;
-}
 
+.Cocktails button {
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.602);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.8s;
+  margin: 5px 10px 5px 10px;
+}
+.Cocktails button:hover {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.967);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.956);
+  transition: 0.8s;
+}
+.Banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.space {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #000;
+}
+.Banner img {
+  width: 100%;
+}
+.buttons {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.card {
+  border: 1px solid #000;
+}
 .nonalcoholic {
   display: flex;
 }
+.drinksContainer {
+  display: flex;
+  width: 1000px;
+  background-color: aqua;
+}
 .card img {
-  width: 200px;
+  position: relative;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+  overflow: hidden;
 }
 .Cocktails {
   padding-top: 100px;
