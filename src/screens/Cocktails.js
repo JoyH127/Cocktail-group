@@ -1,9 +1,11 @@
 import { useState } from "react";
 import CocktailCard from "../components/CocktailCard";
-import fetchData from "../services/constants";
 import Banner from "../img/Banner.jpg";
 import left from "../img/next.png";
 import right from "../img/right.png";
+import { fetchData } from "../services/constants";
+//import Banner from "../img/Banner.jpg";
+
 function Cocktails() {
   const [cocktails, setCocktails] = useState([]);
 
@@ -57,6 +59,9 @@ function Cocktails() {
         <div className="Cock-text"></div>
         <img src={Banner} />
       </div>
+      {/* <div className="Banner">
+        <img src={Banner} />
+      </div> */}
       <div className="space"></div>
       <div className="buttons">
         <button

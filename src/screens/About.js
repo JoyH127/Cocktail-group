@@ -1,11 +1,13 @@
-function About() {
+import team from "../data/TeamInfo";
+
+function AboutUs() {
   return (
-    <div>
-      <h3>Welcome to React Cocktail App!</h3>
+    <div className="aboutus">
+      <h3>Welcome to Our App!</h3>
       <p></p>
       <p>Team info</p>
     </div>
   );
 }
 
-export default About;
+export default AboutUs;

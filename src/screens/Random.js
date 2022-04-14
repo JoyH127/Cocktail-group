@@ -11,7 +11,7 @@ function Random() {
       );
       //console.log(response.data.drinks)
       const { drinks } = response.data;
-      console.log(drinks);
+      //console.log(drinks);
       setRandom(drinks[0]);
       //  console.log(random)
     } catch (error) {

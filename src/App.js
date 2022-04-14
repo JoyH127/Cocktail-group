@@ -2,10 +2,12 @@ import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import Cocktails from "./screens/Cocktails";
-import About from "./screens/About";
+import AboutUs from "./screens/About";
 import Cocktail from "./screens/Cocktail";
 import logo from "./logo/foodlogo.png";
 import Footer from "./screens/Footer";
+import Recipes from "./screens/Recipes";
+
 function App() {
   return (
     <div className="App">
@@ -14,16 +16,18 @@ function App() {
 
         <nav>
           <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/recipes"}>Recipes</NavLink>
           <NavLink to={"/cocktails"}>Cocktails</NavLink>
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink to={"/about"}>About Us</NavLink>
         </nav>
       </div>
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<Recipes />} />
         <Route path="/cocktails" element={<Cocktails />} />
         <Route path="/cocktails/:name" element={<Cocktail />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       <footer>
         <Footer />
