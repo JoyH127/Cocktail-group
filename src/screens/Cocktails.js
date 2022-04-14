@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CocktailCard from "../components/CocktailCard";
-import fetchData from "../services/constants";
+import {fetchData} from "../services/constants";
 import Banner from "../img/Banner.jpg";
 import left from "../img/next.png";
 import right from "../img/right.png";
