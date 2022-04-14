@@ -1,8 +1,9 @@
 import { useState } from "react";
 import CocktailCard from "../components/CocktailCard";
-import {fetchData} from "../services/constants";
-//import Banner from "../img/Banner.jpg";
-
+import fetchData from "../services/constants";
+import Banner from "../img/Banner.jpg";
+import left from "../img/next.png";
+import right from "../img/right.png";
 function Cocktails() {
   const [cocktails, setCocktails] = useState([]);
 
@@ -41,12 +42,21 @@ function Cocktails() {
       );
     });
   };
+  const slideRight = () => {
+    let slide = document.querySelector(".drinksContainer");
+    slide.scrollLeft = slide.scrollLeft + 700;
+  };
+  const slideLeft = () => {
+    let slide = document.querySelector(".drinksContainer");
+    slide.scrollLeft = slide.scrollLeft - 700;
+  };
 
   return (
     <div className="Cocktails">
-      {/* <div className="Banner">
+      <div className="Banner">
+        <div className="Cock-text"></div>
         <img src={Banner} />
-      </div> */}
+      </div>
       <div className="space"></div>
       <div className="buttons">
         <button
@@ -66,8 +76,15 @@ function Cocktails() {
           Non-Alcoholic Cocktails
         </button>
       </div>
-      <div></div>
-      <div className="drinksContainer">{renderCocktails()}</div>
+      {cocktails.length == 0 ? (
+        <></>
+      ) : (
+        <div className="main-slider">
+          <img className="left" src={left} onClick={slideLeft} />
+          <div className="drinksContainer">{renderCocktails()}</div>
+          <img className="right" src={right} onClick={slideRight} />
+        </div>
+      )}
     </div>
   );
 }
