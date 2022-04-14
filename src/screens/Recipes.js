@@ -25,6 +25,7 @@ function Recipes(){
             recipes.map((recipe,index) => {
                 return(
                 <div className="recipeGrp">
+
                     <button onClick={(e) => handleCategoryListBtn(e)} value={recipe.strCategory}>{recipe.strCategory}</button>
                     <button onClick={(e) => handleCuisineListBtn(e)} value={recipe.strArea}>{recipe.strArea}</button>
                 </div>
