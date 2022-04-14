@@ -2,7 +2,7 @@ import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import Cocktails from "./screens/Cocktails";
-import AboutUs from "./screens/About";
+import AboutUs from "./screens/AboutUs";
 import Cocktail from "./screens/Cocktail";
 import logo from "./logo/foodlogo.png";
 import Footer from "./screens/Footer";
