@@ -1,9 +1,10 @@
 import { useState } from "react";
 import CocktailCard from "../components/CocktailCard";
-import {fetchData} from "../services/constants";
 import Banner from "../img/Banner.jpg";
 import left from "../img/next.png";
 import right from "../img/right.png";
+import { fetchData } from "../services/constants";
+
 function Cocktails() {
   const [cocktails, setCocktails] = useState([]);
 
@@ -53,8 +54,11 @@ function Cocktails() {
 
   return (
     <div className="Cocktails">
-      <div className="Banner">
+      {/* <div className="Banner">
         <div className="Cock-text"></div>
+        <img src={Banner} />
+      </div> */}
+      <div className="Banner">
         <img src={Banner} />
       </div>
       <div className="space"></div>
