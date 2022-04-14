@@ -13,7 +13,7 @@ function Recipes(){
         e.preventDefault()
         try {
             let res = await fetchRecipes(e.target.value)
-             console.log(res)
+             //console.log(res)
              setRecipes(res.data.meals)
         } catch (error) {
             console.log(error)
@@ -23,11 +23,15 @@ function Recipes(){
     const renderRecipes = () => {
         return(
             recipes.map((recipe,index) => {
+                let categName  = recipe.strCategory
+                let cuisName = recipe.strArea
+                //console.log(categName)
                 return(
                 <div className="recipeGrp">
-
-                    <button onClick={(e) => handleCategoryListBtn(e)} value={recipe.strCategory}>{recipe.strCategory}</button>
-                    <button onClick={(e) => handleCuisineListBtn(e)} value={recipe.strArea}>{recipe.strArea}</button>
+                { categName ?
+                    <button onClick={(e) => handleCategoryListBtn(e)} value={categName}>{categName}</button>:
+                    <button onClick={(e) => handleCuisineListBtn(e)} value={cuisName}>{cuisName}</button>
+                 }
                 </div>
                 )
             })
@@ -47,7 +51,7 @@ function Recipes(){
         } catch (error) {
             console.log(error)
         }
-        console.log(categLists)
+        //console.log(categLists)
     }
 
     const handleCuisineListBtn = async (e) => {
@@ -62,12 +66,12 @@ function Recipes(){
        } catch (error) {
            console.log(error)
        }
-       console.log(cuisLists)
+       //console.log(cuisLists)
     }
 
     const renderCategoryList = () => {
           return categLists.map((categList,index) => {
-                //console.log(categList.strMealThumb)
+            //console.log("categ", categList.strMealThumb)
                 return(
                     <RecipeCard 
                         name={categList.strMeal}
@@ -79,6 +83,7 @@ function Recipes(){
    
     const renderCuisineList = () => {
         return cuisLists.map((cuisList,index) => {
+               //console.log("cuis", cuisList.strMealThumb)
                 return(
                     <CuisineCard 
                         name={cuisList.strMeal}
@@ -98,7 +103,9 @@ function Recipes(){
         </div>
         <div className="choiceDiv">{renderRecipes()} </div>
         <div className="renderDiv">
-        <div> {renderCategoryList()} {renderCuisineList()} </div>
+         <div> Categories {renderCategoryList()} </div>
+         <div></div>
+         <div>Cuisines{renderCuisineList()} </div> 
         </div>
         </div>
     )
