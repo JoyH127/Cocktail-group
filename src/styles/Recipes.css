@@ -1,0 +1,79 @@
+/* .Banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+} */
+
+.choiceList button{
+    color: black;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.602);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.8s;
+    margin: 5px 10px 5px 10px;
+}
+
+.choiceList button:hover{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.967);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.956);
+    transition: 0.8s;
+}
+
+.recipesMain {
+    padding-top: 100px;
+}
+
+.choiceList {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.renderDiv {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+}
+
+.recipeGrp{
+    display: inline-flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    width: 80px;
+    height: 40px;
+    justify-content: space-between;
+}
+
+/* RecipeCard */
+.categories {
+    border: 1px solid #000;
+}
+
+.categories img {
+    position: relative;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+/* CuisineCard */
+.cuisines {
+    border: 1px solid #000;
+}
+.cuisines img {
+    position: relative;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 5%;
+    overflow: hidden;
+}
