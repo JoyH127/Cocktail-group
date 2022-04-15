@@ -1,12 +1,10 @@
 import '../styles/Recipes.css'
-import { Fragment, useRef, useState } from 'react';
+import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {fetchCategoryList, fetchRecipes, fetchCuisineList} from '../services/constants'
 import RecipeCard from '../components/RecipeCard';
-import left from "../img/next.png";
-import right from "../img/right.png";
 import food4 from '../img/food4.jpeg'
 
 
@@ -85,24 +83,12 @@ function Recipes(){
                 )
             })
     }
-
-   
  
-    //  const slideRight = () => {
-    //    let slide = document.querySelector(".renderDiv");
-    //     slide.scrollLeft = slide.scrollLeft + 400;
-    //   };
-    //   const slideLeft = () => {
-    //     let slide = document.querySelector(".renderDiv");
-    //     slide.scrollLeft = slide.scrollLeft - 400;
-    //   };
-
     return(
         <div className="recipesMain">
         <div className="foodbanner">
             <img src={food4} />
         </div>
-        <div className="space"></div>
         <div className="choiceList">
             <button onClick={(e) => handleRecipesList(e)} value="c=list">Recipes by Category</button>
             <button onClick={(e) => handleRecipesList(e)} value="a=list">Recipes by Cuisine</button>
@@ -116,17 +102,6 @@ function Recipes(){
         slidesToShow={4}
         // slidesToScroll={4} 
         >{renderCategoryList()}</Slider>
-        
-
-        {/* {categLists.length === 0 ? (
-        //     <></>
-        //   ) : (
-        //     <div className="foodslider">
-        //         <img className="left" src={left} onClick={slideLeft} />
-        //         <div className="renderDiv">{renderCategoryList()}</div>
-        //         <img className="right" src={right} onClick={slideRight} />
-        //     </div>
-        //   )} */}
         </div>
     )
 }
