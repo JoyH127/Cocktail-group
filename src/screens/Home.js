@@ -20,7 +20,7 @@ function Home() {
           <div className="background_cover"></div>
           <video className="background" autoPlay loop muted>
             <source src={backgroundvideo} type="video/mp4" />
-         </video>
+          </video>
         </div>
       </section>
       <section id="recommendSection">

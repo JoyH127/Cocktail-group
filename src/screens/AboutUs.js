@@ -1,4 +1,4 @@
-import "../styles/About.css"
+import "../styles/About.css";
 import teamInfo from "../data/TeamInfo";
 import lance from "../img/Lance.jpg";
 import Pooja from "../img/dog.jpg";
