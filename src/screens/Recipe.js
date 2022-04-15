@@ -97,7 +97,7 @@ function Recipe(props) {
         <div className="main-recipe-info-container">
          <div className="recipe-banner-div" >Fixed Banner</div>
           <div className="info-image-container">
-            <div className="image">
+            <div className="recipe-image-container">
               <p className="recipe-name">{recipeName}</p>
               <img
                 className="info-thumb"
@@ -140,7 +140,7 @@ function Recipe(props) {
               </div>
               <div className="recipe-directions">
                 <p className="recipe-directions-title">Directions</p>
-                <p>{instruction}</p>
+                <p className="recipe-instruction-paragraph" >{instruction}</p>
               </div>
             </div>
           </div>
