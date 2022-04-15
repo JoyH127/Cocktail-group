@@ -75,7 +75,7 @@ function Recipe(props) {
         ? strMeasure.slice(9, strMeasure.length - 1)
         : strMeasure;
 
-    setMeasure(strMeasure);
+//     setMeasure(strMeasure);
     //setIngredients(strIngredient);
     setRecipeName(strName);
     setInstruction(strInstruction);
