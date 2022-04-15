@@ -8,7 +8,7 @@ function CocktailCard(props) {
       <div>
         <img src={props.image} alt="drink" />
         <div className="cock-cover">
-          <h3>{props.name}</h3>
+          <h2>{props.name}</h2>
         </div>
       </div>
     </div>

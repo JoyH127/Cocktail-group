@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Cocktails.css";
 import CocktailCard from "../components/CocktailCard";
 import Banner from "../img/Banner.jpg";
 import left from "../img/next.png";
@@ -56,6 +57,7 @@ function Cocktails() {
     <div className="Cocktails">
       <div className="Banner">
         <div className="Cock-text"></div>
+        <h1>Cocktails</h1>
         <img src={Banner} />
       </div>
       {/* <div className="Banner">
