@@ -75,7 +75,7 @@ function Recipe(props) {
         ? strMeasure.slice(9, strMeasure.length - 1)
         : strMeasure;
 
-//     setMeasure(strMeasure);
+    //     setMeasure(strMeasure);
     //setIngredients(strIngredient);
     setRecipeName(strName);
     setInstruction(strInstruction);
@@ -95,7 +95,7 @@ function Recipe(props) {
     <div>
       {typeof cocktail !== "undefined" ? (
         <div className="main-recipe-info-container">
-         <div className="recipe-banner-div" >Fixed Banner</div>
+          <div className="recipe-banner-div"></div>
           <div className="info-image-container">
             <div className="recipe-image-container">
               <p className="recipe-name">{recipeName}</p>
@@ -140,7 +140,7 @@ function Recipe(props) {
               </div>
               <div className="recipe-directions">
                 <p className="recipe-directions-title">Directions</p>
-                <p className="recipe-instruction-paragraph" >{instruction}</p>
+                <p className="recipe-instruction-paragraph">{instruction}</p>
               </div>
             </div>
           </div>
