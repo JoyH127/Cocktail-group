@@ -14,8 +14,7 @@ import food4 from "../img/food4.jpeg";
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
   const [categLists, setCategLists] = useState([]);
-  const [images, setImages] = useState(0);
-
+ 
   const handleRecipesList = async (e) => {
     e.preventDefault();
     try {

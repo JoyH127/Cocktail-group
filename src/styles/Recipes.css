@@ -120,7 +120,7 @@ button {
   height: 400px;
   overflow: hidden;
   bottom: 0;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 .space-recipt {

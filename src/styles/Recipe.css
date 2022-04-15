@@ -44,6 +44,7 @@
 
 .info-thumb {
   border-radius: 20px;
+  
 }
 .main-recipe-info-container {
   font-family: "Cormorant Garamond";
@@ -52,7 +53,7 @@
   justify-content: center;
   /* border: 2px solid; */
   padding-top: 140px; 
-  padding-bottom: 200px; 
+  padding-bottom: 120px; 
   /* padding-right: 300px; */
 }
 
@@ -81,7 +82,7 @@
   border: 1px solid;
   border-color: rgb(178, 147, 110);
   padding: 0 20px 10px 20px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .recipe-directions-title {
   text-align: center;
@@ -102,15 +103,17 @@
   width: 100%;
   z-index: -1;
   overflow: hidden;
+  filter:blur(4px);
 }
-.recipe-banner-dev img {
+.recipe-banner-div img {
   width: 100%;
   overflow: hidden;
+
 }
 .recipe-instruction-paragraph {
   font-size: 15px;
 }
 .recipe-image-container {
-  z-index: 1;
+  /* z-index: 1; */
   margin-top: 50px;
 }

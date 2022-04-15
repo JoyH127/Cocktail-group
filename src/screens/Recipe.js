@@ -95,7 +95,7 @@ function Recipe(props) {
     <div>
       {typeof cocktail !== "undefined" ? (
         <div className="main-recipe-info-container">
-         <div className="recipe-banner-div" >Fixed Banner</div>
+         <div className="recipe-banner-div"></div>
           <div className="info-image-container">
             <div className="recipe-image-container">
               <p className="recipe-name">{recipeName}</p>
