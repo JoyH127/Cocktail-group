@@ -6,6 +6,9 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+p {
+  font-size: 20px;
+}
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -50,7 +53,7 @@ body {
     rgba(0, 0, 0, 0.642) 0%,
     rgba(0, 0, 0, 0.051) 49%
   );
-  z-index: 6;
+  z-index: 100;
 }
 /* ----------- HomePage -------------*/
 
@@ -58,6 +61,7 @@ body {
   position: relative;
   overflow: hidden;
   display: block;
+  height: 800px;
 }
 .background {
   display: block;
@@ -79,6 +83,10 @@ body {
 h1 {
   font-family: "Cormorant Garamond";
 }
+.text h1 {
+  font-size: 47px;
+}
+
 .text {
   position: absolute;
   color: white;
@@ -86,22 +94,27 @@ h1 {
   bottom: 220px;
   left: 100px;
   text-align: left;
-  width: 500px;
+  width: 600px;
   line-height: 2;
+  top: 43%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
+
 .text button {
   color: rgba(255, 255, 255, 0.934);
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   border: 1px solid rgba(255, 255, 255, 0.602);
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
   transition: 0.8s;
+  margin-top: 20px;
 }
 .text button:hover {
   color: rgb(255, 255, 255);
   padding: 10px;
-  font-size: 15px;
+
   border: 1px solid rgba(255, 255, 255, 0.967);
   border-radius: 3px;
   background-color: rgba(254, 254, 254, 0.156);
@@ -114,10 +127,13 @@ h1 {
   transition: 0.8s;
 }
 
+/* fixed #recommend Sec */
 /* Home ----- Recommend Section in */
 #recommendSection {
-  margin: 50px 0 80px 0;
+  margin: 50px 0 120px 0;
+  color: black;
 }
+
 .recommend {
   display: flex;
   justify-content: center;
@@ -195,7 +211,7 @@ h1 {
 .cover button {
   color: rgba(255, 255, 255, 0.934);
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   border: 1px solid rgba(255, 255, 255, 0.602);
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
@@ -205,204 +221,13 @@ h1 {
 .cover button:hover {
   color: rgb(255, 255, 255);
   padding: 10px;
-  font-size: 15px;
+
   border: 1px solid rgba(255, 255, 255, 0.967);
   border-radius: 3px;
   background-color: rgba(254, 254, 254, 0.156);
   transition: 0.8s;
 }
 
-/* Cocktails Page */
-
-.Cocktails button {
-  color: black;
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.602);
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0);
-  transition: 0.8s;
-  margin: 5px 10px 5px 10px;
-}
-.Cocktails button:hover {
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.967);
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.956);
-  transition: 0.8s;
-}
-.Banner {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-.Cock-text {
-  font-family: "Cormorant Garamond";
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.617) 0%,
-    rgba(74, 74, 74, 0.14887962020745793) 49%
-  );
-  height: 500px;
-}
-.space {
-  width: 100%;
-  height: 150px;
-  border: 1px solid #000;
-}
-.Banner img {
-  position: relative;
-  bottom: 700px;
-  width: 100%;
-}
-
-.buttons {
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-
-.card {
-  margin: 0 auto;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  border-radius: 10px;
-}
-.card:hover {
-  background-color: rgba(252, 252, 252, 0.782);
-  margin: 0 auto;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.Cocktails button {
-  color: black;
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.602);
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0);
-  transition: 0.8s;
-  margin: 5px 10px 5px 10px;
-}
-.Cocktails button:hover {
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.967);
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.956);
-  transition: 0.8s;
-}
-.Banner {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-.space {
-  width: 100%;
-  height: 150px;
-  border: 1px solid #000;
-}
-.Banner img {
-  position: relative;
-  bottom: 700px;
-  width: 100%;
-}
-
-.buttons {
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
-
-.card {
-  margin: 0 auto;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  border-radius: 10px;
-}
-.card:hover {
-  background-color: rgba(252, 252, 252, 0.782);
-  margin: 0 auto;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.nonalcoholic {
-  display: flex;
-}
-.drinksContainer {
-  display: flex;
-  width: 1100px;
-  margin: 0 auto;
-  /* flex-wrap: wrap;
-  flex-direction: row; */
-  overflow-x: scroll;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-.main-slider {
-  margin: 0 auto;
-  width: 1500px;
-  position: relative;
-  margin-bottom: 45px;
-  transition: 0.5s;
-}
-.left,
-.right {
-  position: absolute;
-  z-index: 4px;
-  width: 30px;
-}
-.left {
-  left: 150px;
-  top: 170px;
-}
-.right {
-  right: 140px;
-  top: 170px;
-}
-.card img {
-  position: relative;
-  margin: 20px 20px 0 20px;
-  width: 1000px;
-  background-color: aqua;
-}
-.card img {
-  position: relative;
-  margin: 20px 20px 0 20px;
-  width: 300px;
-  height: 300px;
-  border-radius: 5%;
-  overflow: hidden;
-}
-.card button {
-  display: block;
-  margin: 0 auto;
-}
-.Cocktails {
-  padding-top: 100px;
-}
-
-.cockCollection {
-  display: block;
-  margin: 0 auto;
-  width: 500px;
-  border: 1px solid #000;
-}
 /* Footer */
 .footer {
   width: 100%;

@@ -89,8 +89,11 @@ function Recipes() {
   return (
     <div className="recipesMain">
       <div className="foodbanner">
+        <div className="cover-recipe"></div>
+        <h1>Recipes</h1>
         <img src={food4} />
       </div>
+      <div className="space-recipt"></div>
       <div className="choiceList">
         <button onClick={(e) => handleRecipesList(e)} value="c=list">
           Recipes by Category
