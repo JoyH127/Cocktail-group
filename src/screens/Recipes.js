@@ -102,20 +102,19 @@ function Recipes() {
           Recipes by Cuisine
         </button>
       </div>
-      <div className="choiceDiv">{renderRecipes()} </div>
-      <div>
-        <br></br>
-      </div>
 
-      <Slider
-        className="renderDiv"
-        dots={false}
-        arrows={true}
-        slidesToShow={4}
-        // slidesToScroll={4}
-      >
-        {renderCategoryList()}
-      </Slider>
+      <div className="choiceDiv">{renderRecipes()} </div>
+      <div className="slider-container-recipes">
+        <Slider
+          className="renderDiv"
+          dots={false}
+          arrows={true}
+          slidesToShow={4}
+          // slidesToScroll={4}
+        >
+          {renderCategoryList()}
+        </Slider>
+      </div>
     </div>
   );
 }

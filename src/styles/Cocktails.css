@@ -1,9 +1,8 @@
 /* Cocktails Page */
 
-.Cocktails button {
+/* .Cocktails button {
   color: black;
   padding: 10px;
-  font-size: 15px;
   border: 1px solid rgba(0, 0, 0, 0.602);
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
@@ -13,7 +12,6 @@
 .Cocktails button:hover {
   color: rgb(255, 255, 255);
   padding: 10px;
-  font-size: 15px;
   border: 1px solid rgba(0, 0, 0, 0.967);
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.956);
@@ -70,24 +68,22 @@
   padding-bottom: 20px;
   border-radius: 10px;
   transition: 0.5s;
-}
+} */
 .Cocktails button {
-  color: black;
-  padding: 10px;
-  font-size: 15px;
+  color: rgb(255, 255, 255);
+  padding: 15px 30px 15px 30px;
+  font-size: 18px;
   border: 1px solid rgba(0, 0, 0, 0.602);
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  background-color: rgb(0, 0, 0);
   transition: 0.8s;
   margin: 5px 10px 5px 10px;
 }
 .Cocktails button:hover {
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.967);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.956);
+  background-color: white;
   transition: 0.8s;
 }
 .Banner {
@@ -181,7 +177,9 @@
 .Cocktails {
   padding-top: 100px;
 }
-
+.card h2 {
+  color: #000;
+}
 .cockCollection {
   display: block;
   margin: 0 auto;
