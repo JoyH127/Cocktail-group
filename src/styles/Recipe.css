@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 30px;
-  margin-top: 100px;
+  margin-top: 80px;
   /* border: 1px solid; */
   padding: 15px;
   padding-left: 25px;
@@ -51,8 +51,9 @@
   /* flex-wrap: wrap; */
   justify-content: center;
   /* border: 2px solid; */
-  padding-top: 140px;  
-  padding-right: 300px;
+  padding-top: 140px; 
+  padding-bottom: 200px; 
+  /* padding-right: 300px; */
 }
 
 .recipe-measurements{
@@ -73,7 +74,7 @@
 .recipe-directions{
   background-color: rgb(250, 248, 244);
   border-radius: 20px;
-  width: 460px;
+  width: 500px;
   min-width: 200px;
   text-align: left;
   margin-top: 20px;
