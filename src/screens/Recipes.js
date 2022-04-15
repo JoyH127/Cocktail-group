@@ -1,19 +1,20 @@
 import '../styles/Recipes.css'
-import { useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import {fetchCategoryList, fetchRecipes, fetchCuisineList} from '../services/constants'
 import RecipeCard from '../components/RecipeCard';
 import left from "../img/next.png";
 import right from "../img/right.png";
-import food from '../img/food.jpeg'
-import food2 from '../img/food2.jpeg'
-import food1 from '../img/food1.jpeg'
-import food3 from '../img/food3.jpeg'
 import food4 from '../img/food4.jpeg'
-import foodbanner from '../img/foodbanner.jpeg'
+
 
 function Recipes(){
     const [recipes, setRecipes] = useState([])
     const [categLists, setCategLists] = useState([])
+    const [images, setImages] = useState(0)
+    
   
     const handleRecipesList = async (e) => {
         e.preventDefault()
@@ -84,15 +85,17 @@ function Recipes(){
                 )
             })
     }
+
+   
  
-    const slideRight = () => {
-        let slide = document.querySelector(".renderDiv");
-        slide.scrollLeft = slide.scrollLeft + 700;
-      };
-      const slideLeft = () => {
-        let slide = document.querySelector(".renderDiv");
-        slide.scrollLeft = slide.scrollLeft - 700;
-      };
+    //  const slideRight = () => {
+    //    let slide = document.querySelector(".renderDiv");
+    //     slide.scrollLeft = slide.scrollLeft + 400;
+    //   };
+    //   const slideLeft = () => {
+    //     let slide = document.querySelector(".renderDiv");
+    //     slide.scrollLeft = slide.scrollLeft - 400;
+    //   };
 
     return(
         <div className="recipesMain">
@@ -106,15 +109,24 @@ function Recipes(){
         </div>
         <div className="choiceDiv">{renderRecipes()} </div>
         <div><br></br></div>
-        {categLists.length === 0 ? (
-            <></>
-          ) : (
-            <div className="foodslider">
-                <img className="left" src={left} onClick={slideLeft} />
-                <div className="renderDiv">{renderCategoryList()}</div>
-                <img className="right" src={right} onClick={slideRight} />
-            </div>
-          )}
+       
+        <Slider className="renderDiv"
+        dots={false}
+        arrows={true}
+        slidesToShow={4}
+        // slidesToScroll={4} 
+        >{renderCategoryList()}</Slider>
+        
+
+        {/* {categLists.length === 0 ? (
+        //     <></>
+        //   ) : (
+        //     <div className="foodslider">
+        //         <img className="left" src={left} onClick={slideLeft} />
+        //         <div className="renderDiv">{renderCategoryList()}</div>
+        //         <img className="right" src={right} onClick={slideRight} />
+        //     </div>
+        //   )} */}
         </div>
     )
 }
