@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
 body {
-  background-color: rgb(214, 206, 194);
+  background-color: #d6cec2;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -35,6 +35,16 @@ body {
   color: rgba(240, 248, 255, 0.747);
   font-size: 23px;
   transition: 0.8s;
+}
+.navDiv button{
+  /* background-color: #d6cec2; */
+  /* color:  rgba(240, 248, 255, 0.747); */
+  border: solid 0px black;
+  width: 120px;
+  border-radius: 5px;
+  font-size: medium;
+  padding: 5px;
+  margin: 2px 10px 10px 10px;
 }
 .navDiv {
   position: relative;
