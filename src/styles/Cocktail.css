@@ -139,6 +139,7 @@
   flex-direction: row;
   justify-content: center;
   padding-top: 120px;
+  padding-right: 350px;
 }
 
 .cocktail-measurements {
@@ -169,3 +170,4 @@
   line-height: 0.1;
   font-weight: 700;
 }
+
