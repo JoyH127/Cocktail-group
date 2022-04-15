@@ -1,8 +1,7 @@
+import "../styles/Recipe.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-
 
 function Recipe(props) {
   const [cocktail, setCocktail] = useState([]);

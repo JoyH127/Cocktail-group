@@ -1,3 +1,6 @@
+*{
+    color: black;
+}
 .choiceList button{
     color: black;
     padding: 10px;
@@ -6,8 +9,9 @@
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
     transition: 0.8s;
-    margin: 5px 10px 0px 10px;
+    margin: -100px 10px 0px 10px;
     width: 175px;
+    top: 0;
 }
 .choiceList button:hover{
     color: rgb(255, 255, 255);
@@ -22,7 +26,7 @@
     padding-top: 100px;
 }
 .choiceList {
-    margin-top: 90px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 .choiceDiv{
@@ -106,49 +110,26 @@
     overflow: hidden;
     align-content: center;
 }
-.foodbanner{
+/* .foodbanner{
     position: absolute;
-    top: 68px;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    z-index: 2;
-    /* background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.617) 0%,
-    rgba(74, 74, 74, 0.14887962020745793) 49%
-  ); */
-}
-.space {
+    top: 75px; 
     width: 100%;
     height: 150px;
-    border: 1px solid #000;
-}
-.foodslider{
-    margin: 0 auto;
-    width: 1500px;
-    position: relative;
-    margin-bottom: 45px;
-    transition: 0.5s;
-}
-.left,
-.right {
-  position: absolute;
-  z-index: 4px;
-  width: 25px;
-}
-.left {
-  left: 300px;
-  top: 150px;
-  
-}
-.right {
-  right: 140px;
-  top: 170px;
+    bottom: 50px;
+} */
 
+.foodbanner img{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    top: -35px;
+    overflow: hidden;
+    bottom: 0;
 }
+
 .footer{
     bottom: 0;
     position: fixed;
+    height: 75px;
 }
 

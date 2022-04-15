@@ -1,12 +1,10 @@
 import '../styles/Recipes.css'
-import { Fragment, useRef, useState } from 'react';
+import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {fetchCategoryList, fetchRecipes, fetchCuisineList} from '../services/constants'
 import RecipeCard from '../components/RecipeCard';
-import left from "../img/next.png";
-import right from "../img/right.png";
 import food4 from '../img/food4.jpeg'
 
 
@@ -91,7 +89,6 @@ function Recipes(){
         <div className="foodbanner">
             <img src={food4} />
         </div>
-        <div className="space"></div>
         <div className="choiceList">
             <button onClick={(e) => handleRecipesList(e)} value="c=list">Recipes by Category</button>
             <button onClick={(e) => handleRecipesList(e)} value="a=list">Recipes by Cuisine</button>
