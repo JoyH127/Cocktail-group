@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 function Recipe(props) {
   const [cocktail, setCocktail] = useState([]);
 
-  const [measurement, setMeasure] = useState([]);
   const [measurement1, setMeasurement1] = useState([]);
   const [measurement2, setMeasurement2] = useState([]);
   const [recipeName, setRecipeName] = useState([]);
@@ -96,6 +95,7 @@ function Recipe(props) {
     <div>
       {typeof cocktail !== "undefined" ? (
         <div className="main-recipe-info-container">
+         <div className="recipe-banner-div" >Fixed Banner</div>
           <div className="info-image-container">
             <div className="image">
               <p className="recipe-name">{recipeName}</p>
