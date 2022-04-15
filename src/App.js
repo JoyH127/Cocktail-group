@@ -1,4 +1,5 @@
 import "./App.css";
+import "./About.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import Cocktails from "./screens/Cocktails";
