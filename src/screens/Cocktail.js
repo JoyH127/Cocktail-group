@@ -81,45 +81,44 @@ function Cocktail(props) {
   return (
     <div>
       {typeof cocktail !== "undefined" ? (
-        <section className="">
-          <div className="main-cocktail-info-container">
-            <div className="cover-cock"></div>
-            <div className="info-image-container">
-              <div className="image">
-                <p className="cocktail-name">{drinkName}</p>
-                <img
-                  className="info-thumb"
-                  src={cocktail.strDrinkThumb}
-                  alt="cocktail"
-                />
-                <p>served in a {drinkGlass}</p>
+        <div className="main-cocktail-info-container">
+          <div className="cock-banner-div"></div>
+          <div className="cover-cock"></div>
+          <div className="info-image-container">
+            <div className="image">
+              <p className="cocktail-name">{drinkName}</p>
+              <img
+                className="info-thumb"
+                src={cocktail.strDrinkThumb}
+                alt="cocktail"
+              />
+              <p>served in a {drinkGlass}</p>
+            </div>
+            <div className="info-details">
+              <div className="how-to-make-container">
+                <div className="cocktail-ingredients-heading">
+                  <h3>Ingredients</h3>
+                </div>
+
+                <div className="cocktail-ingredients">
+                  {ingredient.map((ing) => (
+                    <p>{ing}</p>
+                  ))}
+                </div>
+
+                <div className="cocktail-measurements">
+                  {measurement.map((measure) => (
+                    <p>{measure}</p>
+                  ))}
+                </div>
               </div>
-              <div className="info-details">
-                <div className="how-to-make-container">
-                  <div className="cocktail-ingredients-heading">
-                    <h3>Ingredients</h3>
-                  </div>
-
-                  <div className="cocktail-ingredients">
-                    {ingredient.map((ing) => (
-                      <p>{ing}</p>
-                    ))}
-                  </div>
-
-                  <div className="cocktail-measurements">
-                    {measurement.map((measure) => (
-                      <p>{measure}</p>
-                    ))}
-                  </div>
-                </div>
-                <div className="cocktail-directions">
-                  <p className="cocktail-directions-title">Directions</p>
-                  <p>{instruction}</p>
-                </div>
+              <div className="cocktail-directions">
+                <p className="cocktail-directions-title">Directions</p>
+                <p>{instruction}</p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       ) : (
         ""
       )}
