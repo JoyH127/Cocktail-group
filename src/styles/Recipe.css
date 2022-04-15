@@ -89,7 +89,7 @@
 .individual-list-item{
   line-height: .9;
 }
-.recipe-banner-div{
+/* .recipe-banner-div{
   position: fixed;
   background-image: url(img/recipebanner.jpg);
   background-size: cover;
@@ -98,6 +98,6 @@
   width: 100%;
   z-index: -1;
   
-}
+} */
 
 
