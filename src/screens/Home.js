@@ -1,6 +1,6 @@
 import FoodRandom from "./FoodRandom";
 import Random from "./Random";
-import backgroundVideo from "../video/cheese.mp4";
+import backgroundvideo from "../video/cheese.mp4";
 import { NavLink } from "react-router-dom";
 function Home() {
   return (
@@ -19,8 +19,8 @@ function Home() {
           </div>
           <div className="background_cover"></div>
           <video className="background" autoPlay loop muted>
-            <source src={backgroundVideo} type="video/mp4" />
-          </video>
+            <source src={backgroundvideo} type="video/mp4" />
+         </video>
         </div>
       </section>
       <section id="recommendSection">

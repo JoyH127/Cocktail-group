@@ -54,13 +54,13 @@ function Cocktails() {
 
   return (
     <div className="Cocktails">
-      {/* <div className="Banner">
+      <div className="Banner">
         <div className="Cock-text"></div>
         <img src={Banner} />
-      </div> */}
-      <div className="Banner">
-        <img src={Banner} />
       </div>
+      {/* <div className="Banner">
+        <img src={Banner} />
+      </div> */}
       <div className="space"></div>
       <div className="buttons">
         <button

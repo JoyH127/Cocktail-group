@@ -34,13 +34,26 @@
     height: 180px;
     border: solid 1px black;
 }
+.recipeGrp button:hover{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.967);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.956);
+    transition: 0.8s;
+}
 .renderDiv {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-   margin: 0 auto;
-    width: 1000px;
+    /* margin: 0 auto; */
+    /* width: 1400px; */
+    width: 93%;
+    margin-left: 50px;
+    margin-right: 40px;
 }
+
 .recipeGrp{
     display: flex;
     flex-wrap: wrap;
@@ -65,23 +78,32 @@
 
 /* RecipeCard */
 .recipecard {
+    position: relative;
     margin: 0 auto;
-    margin-left: 20px;
-    padding-bottom: 5px;
     border-radius: 10px;
     border: 1px solid #000;
-    width: 400px;
-    padding: 5px;
+    width: 290px;
     margin: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
-
+.recipecard:hover {
+    /* background-color: rgba(252, 252, 252, 0.782); */
+    background-color: rgba(1, 20, 35, 0.206);
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
 .recipecard img {
     position: relative;
-    margin: 18px;
-    width: 275px;
-    height: 275px;
+    margin: 10px 0px 5px 10px;
+    width: 260px;
+    height: 260px;
     border-radius: 5%;
     overflow: hidden;
+    align-content: center;
 }
 .foodbanner{
     position: absolute;
@@ -89,7 +111,12 @@
     width: 100%;
     height: 250px;
     overflow: hidden;
-    /* position: relative; */
+    z-index: 2;
+    /* background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.617) 0%,
+    rgba(74, 74, 74, 0.14887962020745793) 49%
+  ); */
 }
 .space {
     width: 100%;
@@ -107,13 +134,20 @@
 .right {
   position: absolute;
   z-index: 4px;
-  width: 30px;
+  width: 25px;
 }
 .left {
-  left: 150px;
-  top: 170px;
+  left: 300px;
+  top: 150px;
+  
 }
 .right {
   right: 140px;
   top: 170px;
+
 }
+.footer{
+    bottom: 0;
+    position: relative;
+}
+

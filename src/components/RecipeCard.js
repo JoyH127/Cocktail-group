@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 function RecipeCard(props){
+
     const navigate = useNavigate()
     return(
         <div className="recipecard" onClick={() => navigate(`/recipes/${props.name}`)}>
