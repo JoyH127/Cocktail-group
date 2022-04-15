@@ -65,7 +65,7 @@ function Recipe(props) {
     : strMeasure;
 
     setMeasure(strMeasure);
-    setIngredients(strIngredient);
+    //setIngredients(strIngredient);
     setRecipeName(strName);
     setInstruction(strInstruction);
     

@@ -85,18 +85,7 @@ function Recipes(){
                 )
             })
     }
-
-   
  
-    //  const slideRight = () => {
-    //    let slide = document.querySelector(".renderDiv");
-    //     slide.scrollLeft = slide.scrollLeft + 400;
-    //   };
-    //   const slideLeft = () => {
-    //     let slide = document.querySelector(".renderDiv");
-    //     slide.scrollLeft = slide.scrollLeft - 400;
-    //   };
-
     return(
         <div className="recipesMain">
         <div className="foodbanner">
@@ -116,17 +105,6 @@ function Recipes(){
         slidesToShow={4}
         // slidesToScroll={4} 
         >{renderCategoryList()}</Slider>
-        
-
-        {/* {categLists.length === 0 ? (
-        //     <></>
-        //   ) : (
-        //     <div className="foodslider">
-        //         <img className="left" src={left} onClick={slideLeft} />
-        //         <div className="renderDiv">{renderCategoryList()}</div>
-        //         <img className="right" src={right} onClick={slideRight} />
-        //     </div>
-        //   )} */}
         </div>
     )
 }

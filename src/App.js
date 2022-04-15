@@ -7,6 +7,7 @@ import Cocktail from "./screens/Cocktail";
 import logo from "./logo/foodlogo.png";
 import Footer from "./screens/Footer";
 import Recipes from "./screens/Recipes";
+import Recipe from "./screens/Recipe";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/recipes/:name" element={<Recipe />} />
         <Route path="/cocktails" element={<Cocktails />} />
         <Route path="/cocktails/:name" element={<Cocktail />} />
         <Route path="/about" element={<AboutUs />} />
