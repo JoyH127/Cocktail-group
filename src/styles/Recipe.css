@@ -2,7 +2,7 @@
 /* div{
   border: 1px solid;
 } */
-.how-to-make-recipe-container{
+.how-to-make-recipe-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,13 +13,13 @@
   background-color: rgb(246, 242, 238);
 }
 
-.recipe-ingredients{
+.recipe-ingredients {
   padding-right: 30px;
   margin: 0px;
   width: 20%;
 }
 
-.info-image-container{
+.info-image-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,7 +29,7 @@
   width: 50%;
 }
 
-.info-details{
+.info-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,10 +42,10 @@
   /* border-radius: 20px; */
 }
 
-.info-thumb{
+.info-thumb {
   border-radius: 20px;
 }
-.main-recipe-info-container{
+.main-recipe-info-container {
   font-family: "Cormorant Garamond";
   display: flex;
   /* flex-wrap: wrap; */
@@ -56,22 +56,22 @@
   /* padding-right: 300px; */
 }
 
-.recipe-measurements{
+.recipe-measurements {
   font-weight: 700;
   width: 20%;
 }
 
-.recipe-name{
+.recipe-name {
   font-size: 40px;
-  line-height: .80;
+  line-height: 0.8;
   font-weight: 1000;
 }
-.recipe-ingredients-heading{
+.recipe-ingredients-heading {
   width: 100%;
   font-size: 20px;
-  line-height: .5;
+  line-height: 0.5;
 }
-.recipe-directions{
+.recipe-directions {
   background-color: rgb(250, 248, 244);
   border-radius: 20px;
   width: 500px;
@@ -83,17 +83,17 @@
   padding: 0 20px 10px 20px;
   z-index: 1;
 }
-.recipe-directions-title{
+.recipe-directions-title {
   text-align: center;
   font-size: 25px;
-  line-height: .1;
+  line-height: 0.1;
   font-weight: 700;
 }
-.individual-list-item{
-  line-height: .9;
+.individual-list-item {
+  line-height: 0.9;
   font-size: 15px;
 }
-.recipe-banner-div{
+.recipe-banner-div {
   position: absolute;
   background-image: url("../img/recipebanner.jpg");
   background-size: cover;
@@ -107,12 +107,10 @@
   width: 100%;
   overflow: hidden;
 }
-.recipe-instruction-paragraph{
+.recipe-instruction-paragraph {
   font-size: 15px;
 }
-.recipe-image-container{
+.recipe-image-container {
   z-index: 1;
   margin-top: 50px;
 }
-
-
