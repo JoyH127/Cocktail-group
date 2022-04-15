@@ -50,7 +50,7 @@ body {
     rgba(0, 0, 0, 0.642) 0%,
     rgba(0, 0, 0, 0.051) 49%
   );
-  z-index: 100;
+  z-index: 6;
 }
 /* ----------- HomePage -------------*/
 
@@ -76,9 +76,7 @@ body {
   overflow: hidden;
   display: block;
 }
-h1,
-h2,
-h3 {
+h1 {
   font-family: "Cormorant Garamond";
 }
 .text {
@@ -260,6 +258,7 @@ h3 {
 .space {
   width: 100%;
   height: 150px;
+  border: 1px solid #000;
 }
 .Banner img {
   position: relative;
@@ -270,6 +269,62 @@ h3 {
 .buttons {
   margin-top: 100px;
   margin-bottom: 40px;
+}
+
+.card {
+  margin: 0 auto;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+.card:hover {
+  background-color: rgba(252, 252, 252, 0.782);
+  margin: 0 auto;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.Cocktails button {
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.602);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.8s;
+  margin: 5px 10px 5px 10px;
+}
+.Cocktails button:hover {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.967);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.956);
+  transition: 0.8s;
+}
+.Banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.space {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #000;
+}
+.Banner img {
+  position: relative;
+  bottom: 700px;
+  width: 100%;
+}
+
+.buttons {
+  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -323,6 +378,12 @@ h3 {
 .card img {
   position: relative;
   margin: 20px 20px 0 20px;
+  width: 1000px;
+  background-color: aqua;
+}
+.card img {
+  position: relative;
+  margin: 20px 20px 0 20px;
   width: 300px;
   height: 300px;
   border-radius: 5%;
@@ -366,4 +427,4 @@ h3 {
   padding-left: 10px;
 }
 
-/* is it?  */
+/* add sth more  */

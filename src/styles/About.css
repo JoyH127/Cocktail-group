@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+body {
+  color: white;
+}
+
+h1,
+h2 {
+  font-size: 30px;
+}
+.video-box {
+  width: 100%;
+  height: 1600px;
+  overflow: hidden;
+}
+.video {
+  position: relative;
+  width: 100%;
+  filter: blur(10px);
+}
+.about {
+  width: 1200px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+
+.About-text {
+  margin: 0 auto;
+  width: 800px;
+  line-height: 1.6;
+  padding: 30px 0 30px 0;
+  font-size: 20px;
+}
+.Allmember {
+  display: flex;
+  justify-content: center;
+}
+.member a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  line-height: 2;
+}
+.teamContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.424) 0%,
+    rgba(74, 74, 74, 0.14887962020745793) 49%
+  );
+  width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+.teamContainer:hover {
+  background: rgba(0, 0, 0, 0.653);
+  transition: 0.8s;
+}
+.member {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px;
+  position: relative;
+  top: 0;
+  transition: top ease 0.4s;
+  font-size: 20px;
+}
+.member:hover {
+  top: -20px;
+  background-color: rgba(255, 255, 255, 0.247);
+  transition: 0.34;
+}
+.cover-about {
+  position: absolute;
+  width: 100%;
+  height: 1800px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.149) 49%
+  );
+  z-index: 7;
+}
+
+.member a:hover {
+  top: -20px;
+  color: rgb(241, 218, 9);
+  transition: 0.5s;
+}
+.imgContainer {
+  height: 545px;
+  padding: 20px 0 20px 0;
+}
+hr {
+  width: 400px;
+  border: 1px solid rgb(255, 255, 255);
+}
+.mask1 {
+  -webkit-mask-image: url(/src/img/frame.png);
+  mask-image: url(/src/img/frame.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transition: 0.5s;
+}
+/* .mask2 {
+  -webkit-mask-image: url(/src/img/Poojitha.jpg);
+  mask-image: url(/src/img/frame.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.mask3 {
+  -webkit-mask-image: url(/src/img/Hee.jpg);
+  mask-image: url(/src/img/frame.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+} */
+img {
+  width: 550px;
+}
+

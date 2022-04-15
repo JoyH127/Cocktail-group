@@ -4,7 +4,6 @@ import Banner from "../img/Banner.jpg";
 import left from "../img/next.png";
 import right from "../img/right.png";
 import { fetchData } from "../services/constants";
-//import Banner from "../img/Banner.jpg";
 
 function Cocktails() {
   const [cocktails, setCocktails] = useState([]);
@@ -13,7 +12,7 @@ function Cocktails() {
     e.preventDefault();
     try {
       let res = await fetchData(e.target.value);
-      console.log("NonAlc", res);
+      //console.log("NonAlc", res);
       const nonAlc = res.data.drinks;
       if (nonAlc) {
         setCocktails(nonAlc);
@@ -27,7 +26,7 @@ function Cocktails() {
     e.preventDefault();
     try {
       let res = await fetchData(e.target.value);
-      console.log("Alc", res);
+      //console.log("Alc", res);
       const alc = res.data.drinks;
       if (alc) {
         setCocktails(alc);

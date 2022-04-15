@@ -1,32 +1,60 @@
+import "../styles/Cocktail.css"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Cocktail(props) {
   const [cocktail, setCocktail] = useState([]);
-  const [info, setInfo] = useState([]);
+  //const [info, setInfo] = useState([]);
+
+  const[measurement, setMeasure] = useState([]);
+  const[ingredient, setIngredients] = useState([]);
+  const[drinkName, setDrinkName] = useState([]);
+  const[drinkGlass, setDrinkGlass] = useState([]);
+  const[alcoholic, setAlcoholic] = useState([]);
+  const[instruction, setInstruction] = useState([]);
+
   const { name } = useParams();
-  let results;
-  // console.log(name)
   async function fetchData() {
-    const response = await axios.get(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
-    );
+    const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
     const { drinks } = response.data;
-    // console.log('drinks in fetch', drinks[0])
+    console.log(drinks)
     setCocktail(drinks[0]);
-    //get values of object
-    const details = Object.values(drinks[0]);
-    //filter null values
-    const filterNull = details.filter((word) => {
-      if (typeof word !== "null") return word;
+    const entries = Object.entries(drinks[0]);
+    const filterNull = entries.filter((array) => {
+      if(!array.includes(null)) return array
     });
-    //filter web Address
-    const filterWords = filterNull.filter((word) => {
-      if (!word.includes("http") && !word.includes("nknown")) return word;
+    
+    const filterKey = filterNull.filter((array) => {
+      if( !array[1].includes('http') 
+      && !array[0].includes('strInstructionsDE')
+      && !array[0].includes('strInstructionsIT')
+      && !array[0].includes('idDrink')
+      && !array[0].includes('Creative')
+      && !array[1].includes('null')) return array;
     });
-    //set info array
-    setInfo(filterWords);
+    console.log(measurement)
+
+    const filterMeasure = filterKey.filter(array => array[0].includes('strMeasure'))
+    const filterIngredients = filterKey.filter(array => array[0].includes('strIngredient'))
+    const filterName = filterKey.filter(array => array[0].includes('strDrink'))
+    const filterGlass = filterKey.filter(array => array[0].includes('strGlass'))
+    const filterAlcoholic = filterKey.filter(array => array[0].includes('strAlcoholic'))
+    const filterInstructions = filterKey.filter(array => array[0].includes('strInstruction'))
+
+    const strAlcoholic = filterAlcoholic.map(array => array[1])
+    const strName = filterName.map(array => array[1])
+    const strGlass = filterGlass.map(array => array[1])
+    const strMeasure = filterMeasure.map(array => array[1])
+    const strIngredient = filterIngredients.map(array => array[1])
+    const strInstruction = filterInstructions.map(array => array[1])
+
+    setMeasure(strMeasure);
+    setIngredients(strIngredient);
+    setDrinkName(strName);
+    setDrinkGlass(strGlass);
+    setAlcoholic(strAlcoholic);
+    setInstruction(strInstruction);
   }
 
   useEffect(() => {
@@ -36,25 +64,45 @@ function Cocktail(props) {
   return (
     <div>
       {typeof cocktail !== "undefined" ? (
-        <div className="cocktail-info-container">
-          <div className="cocktail-info-image">
+          <div className="main-cocktail-info-container" >
+        <div className="info-image-container">
+          <div className="image">
+          <p className="cocktail-name" >{drinkName}</p>
             <img
-              className="cocktail-info-thumb"
+              className="info-thumb"
               src={cocktail.strDrinkThumb}
               alt="cocktail"
-              height={300}
-              width={300}
+              height={400}
+              width={400}
             />
+                        <p>served in a {drinkGlass}</p>
+
           </div>
-          <div className="cocktail-info-details">
-            {info.map((item) => (
-              <li className="cocktail-info-para">{item}</li>
-            ))}
+          <div className="info-details">
+            
+            <div className="how-to-make-container">  
+
+            <div className="cocktail-ingredients-heading" ><h3>Ingredients</h3></div>    
+
+              <div className="cocktail-ingredients">
+              {   ingredient.map(ing => 
+                  <p>{ing}</p> ) }
+              </div>
+              
+              <div className="cocktail-measurements" >
+                {measurement.map(measure => 
+                  <p>{measure}</p> )}
+              </div>
+            </div>
+            <div className="cocktail-directions" >
+              <p className="cocktail-directions-title" >Directions</p>
+            <p>{instruction}</p>
+            </div>
           </div>
         </div>
-      ) : (
-        ""
-      )}
+        </div>
+      ) : ("")
+      }
     </div>
   );
 }

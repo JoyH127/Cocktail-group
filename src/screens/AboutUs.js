@@ -1,3 +1,4 @@
+import "../styles/About.css";
 import teamInfo from "../data/TeamInfo";
 import lance from "../img/Lance.jpg";
 import Pooja from "../img/dog.jpg";
@@ -5,6 +6,7 @@ import Hee from "../img/Hee.jpg";
 import normal from "../img/normal.jpg";
 import { useState } from "react";
 import back from "../video/back.mp4";
+
 function AboutUs() {
   const [img, setImg] = useState(normal);
   let member_check = (e) => {
