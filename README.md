@@ -18,20 +18,22 @@ MealDB : https://www.themealdb.com/
 
 **Main Page** <br />
 
-<img src="https://user-images.githubusercontent.com/97911806/164336481-450208b8-5070-45b6-9939-cff1e0a457c7.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164336481-450208b8-5070-45b6-9939-cff1e0a457c7.png" width="400"  /> <br />
+<img src="https://user-images.githubusercontent.com/97911806/164336481-450208b8-5070-45b6-9939-cff1e0a457c7.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164336481-450208b8-5070-45b6-9939-cff1e0a457c7.png" width="600"  /> <br />
 
 **Recipes & Cocktails Page**  <br />
 
-<img src="https://user-images.githubusercontent.com/97911806/164336553-c8cfb909-24be-49c1-b1e0-b954be9db911.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164336553-c8cfb909-24be-49c1-b1e0-b954be9db911.png" width="400"  /> <br />
+<img src="https://user-images.githubusercontent.com/97911806/164336553-c8cfb909-24be-49c1-b1e0-b954be9db911.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164336553-c8cfb909-24be-49c1-b1e0-b954be9db911.png" width="600"  /> <br />
 
 **Detail Page** <br />
 
-<img src="https://user-images.githubusercontent.com/97911806/164336586-10c8a65b-2c89-4200-8f7a-f545c657be9e.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164336586-10c8a65b-2c89-4200-8f7a-f545c657be9e.png " width="400"  /> <br />
+<img src="https://user-images.githubusercontent.com/97911806/164336586-10c8a65b-2c89-4200-8f7a-f545c657be9e.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164336586-10c8a65b-2c89-4200-8f7a-f545c657be9e.png " width="600"  /> <br />
 
 **AboutUs** <br />
 
-<img src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png" width="400"  /> <br />
+<img src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png" width="600"  /> <br />
 
 ### Hierachy  <br />
-<img src="https://user-images.githubusercontent.com/97911806/164342756-191e6ddf-176a-4c49-a3da-bd7957e7a724.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164342756-191e6ddf-176a-4c49-a3da-bd7957e7a724.png" width="400"  /> <br />
+<img src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" width="600"  /> <br />
+
+
 
