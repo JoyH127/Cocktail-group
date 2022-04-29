@@ -8,10 +8,10 @@ Netlify link: https://jazzy-hotteok-ad5c3f.netlify.app/
 - Hee
 
 ## The Project..
-The initial concept of the project provide the cocktails information to Customers from Cocktail DB. We expand the website as the homefood website to inform worldwide foods and cocktails 
+The project's initial concept provides the cocktails recipe information to Customers from Cocktail DB. We expand the website as the home food website to inform worldwide about meals and cocktails recipes.
 
 ## Targeted user
- The targeted customers can be any range of age and race who uses streaming servicce.
+ The targeted customers can be any range of age and race who want to cook various meals. 
 
 ## Wireframe
 
@@ -49,4 +49,4 @@ MealDB : https://www.themealdb.com/
 - READ home foods (MealDB, CocktailDB) 
 
 ## Upcoming Features(Post MVP)
-- Search Bar
+- Search Bar depending on countries or alphabet orders. 
