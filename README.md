@@ -1,17 +1,17 @@
-## è buono
+# è buono
 
-website: https://jazzy-hotteok-ad5c3f.netlify.app/
+Netlify link: https://jazzy-hotteok-ad5c3f.netlify.app/
 
-### Our Group:
+## Our Group:
 - Lance
 - Poojitha
 - Hee
 
-### API: 
-CocktailDB : https://www.thecocktaildb.com/ <br /> 
-MealDB : https://www.themealdb.com/
+## The Project..
+The initial concept of the project provide the cocktails information to Customers from Cocktail DB. We expand the website as the home food website to inform worldwide foods and cocktails.
 
-### Drescription 
+## Targeted user
+ The targeted customers can be any range of age and race who uses streaming servicce.
 
 
 ### Wireframe
@@ -36,4 +36,18 @@ MealDB : https://www.themealdb.com/
 <img src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" width="600"  /> <br />
 
 
+## Dependencies
+#### Frontend
+ - react-router-dom
+ - axios
 
+### API: 
+CocktailDB : https://www.thecocktaildb.com/ <br /> 
+MealDB : https://www.themealdb.com/
+
+## Features (MVP)
+- React router
+- READ home foods (MealDB, CocktailDB) 
+
+## Upcoming Features(Post MVP)
+- 
