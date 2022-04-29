@@ -14,7 +14,7 @@ The initial concept of the project provide the cocktails information to Customer
  The targeted customers can be any range of age and race who uses streaming servicce.
 
 
-### Wireframe
+## Wireframe
 
 **Main Page** <br />
 
@@ -32,7 +32,7 @@ The initial concept of the project provide the cocktails information to Customer
 
 <img src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png " data-canonical-src="https://user-images.githubusercontent.com/97911806/164336630-32e1e644-b108-4fbd-8a1b-e5b9292c24df.png" width="600"  /> <br />
 
-### Hierachy  <br />
+## Hierachy  <br />
 <img src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" data-canonical-src="https://user-images.githubusercontent.com/97911806/164343189-2266a779-f82d-4ef7-93c8-6e2bb1ca60d0.png" width="600"  /> <br />
 
 
@@ -41,7 +41,7 @@ The initial concept of the project provide the cocktails information to Customer
  - react-router-dom
  - axios
 
-### API: 
+#### API 
 CocktailDB : https://www.thecocktaildb.com/ <br /> 
 MealDB : https://www.themealdb.com/
 
